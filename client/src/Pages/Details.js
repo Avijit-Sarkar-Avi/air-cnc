@@ -186,7 +186,7 @@ const Details = () => {
             <span className='ml-auto text-gray-900'>${total}</span>
           </div>
           <div className='mt-6 mb-2'>
-            <Link to='checkout'>
+            <Link to='/checkout'>
               <PrimaryButton
                 type='submit'
                 classes='w-full px-4 py-2 tracking-wide transition-colors duration-300 transform rounded-md'
