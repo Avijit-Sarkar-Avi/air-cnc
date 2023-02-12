@@ -29,7 +29,7 @@ const Signup = () => {
 
 
 
-    const url = "https://api.imgbb.com/1/upload?key=e70f17fca4bd2e87f62f438f8e3a5c68"
+    const url = `https://api.imgbb.com/1/upload?key=e70f17fca4bd2e87f62f438f8e3a5c68`
 
     fetch(url, {
       method: 'POST',

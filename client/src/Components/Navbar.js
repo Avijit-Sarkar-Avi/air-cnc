@@ -90,7 +90,7 @@ const Navbar = () => {
                 Login
               </Link>
               <Link to='/signup' className='mr-5'>
-                <PrimaryButton classes='rounded-full px-2 py-1'>
+                <PrimaryButton className='rounded-full px-2 py-1'>
                   Signup
                 </PrimaryButton>
               </Link>
