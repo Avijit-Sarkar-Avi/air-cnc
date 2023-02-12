@@ -117,8 +117,6 @@ const Checkout = () => {
                 </Tab.Group>
             </div>
 
-            {/* cart */}
-
             <CheckoutCart data={homeData} />
         </div>
     );
