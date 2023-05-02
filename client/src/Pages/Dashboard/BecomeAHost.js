@@ -12,7 +12,8 @@ const BecomeAHost = () => {
             .then(data => {
                 const hostData = {
                     location: location,
-                    image: data
+                    image: data,
+                    role: 'requested'
                 }
                 console.log(hostData)
             })
