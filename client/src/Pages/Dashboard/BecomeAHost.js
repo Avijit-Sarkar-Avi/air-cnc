@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import BecomeHostForm from '../../Components/Form/BecomeHostForm';
 import { getImageUrl } from '../../api/imageUpload';
 import { AuthContext } from '../../contexts/AuthProvider';
+import { hostRequest } from '../../api/user';
 
 const BecomeAHost = () => {
 
@@ -19,7 +20,8 @@ const BecomeAHost = () => {
                     role: 'requested',
                     email: user?.email
                 }
-                console.log(hostData)
+                hostRequest(hostData)
+                .then(data => console.log(data))
             })
     }
 
