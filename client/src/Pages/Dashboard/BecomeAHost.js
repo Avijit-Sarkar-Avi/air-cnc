@@ -1,10 +1,25 @@
 import React from 'react';
 import BecomeHostForm from '../../Components/Form/BecomeHostForm';
+import { getImageUrl } from '../../api/imageUpload';
 
 const BecomeAHost = () => {
-    return (
-        <BecomeHostForm />
-    );
+
+    const handleSubmit = event => {
+        event.preventDefault()
+        const location = event.target.location.value
+        const image = event.target.image.files[0]
+        getImageUrl(image)
+            .then(data => {
+                const hostData = {
+                    location: location,
+                    image: data
+                }
+                console.log(hostData)
+            })
+    }
+
+    return <BecomeHostForm handleSubmit={handleSubmit} />
+
 };
 
 export default BecomeAHost;
