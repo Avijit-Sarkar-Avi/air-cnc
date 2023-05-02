@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import BecomeHostForm from '../../Components/Form/BecomeHostForm';
 import { getImageUrl } from '../../api/imageUpload';
+import { AuthContext } from '../../contexts/AuthProvider';
 
 const BecomeAHost = () => {
+
+    const { user } = useContext(AuthContext)
 
     const handleSubmit = event => {
         event.preventDefault()
@@ -12,8 +15,9 @@ const BecomeAHost = () => {
             .then(data => {
                 const hostData = {
                     location: location,
-                    image: data,
-                    role: 'requested'
+                    documentImg: data,
+                    role: 'requested',
+                    email: user?.email
                 }
                 console.log(hostData)
             })
