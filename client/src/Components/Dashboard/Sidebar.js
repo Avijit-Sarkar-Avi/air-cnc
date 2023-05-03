@@ -4,15 +4,14 @@ import { Link } from 'react-router-dom'
 import PrimaryButton from '../Button/PrimaryButton'
 import { AuthContext } from '../../contexts/AuthProvider'
 import UserMenu from './UserMenu';
-// import UserMenu from './UserMenu'
-// import AdminMenu from './AdminMenu'
-// import HostMenu from './HostMenu'
+import AdminMenu from './AdminMenu'
+import HostMenu from './HostMenu'
 
 
 const Sidebar = ({ role, loading }) => {
     const { user, logout } = useContext(AuthContext)
     const [isActive, setActive] = useState('false')
-
+    console.log(role)
     //sidebar responsive handler
 
     const handleToggle = () => {
@@ -64,17 +63,17 @@ const Sidebar = ({ role, loading }) => {
 
                     <div className='flex flex-col justify-between flex-1 mt-6'>
                         <nav>
-                            {/* {
+                            {
                                 role && role !== 'requested' ? (
                                     <>(role === 'admin' ? <AdminMenu /> : <HostMenu />)</>
                                 ) : (<UserMenu />)
-                            } */}
+                            }
                             <UserMenu />
                         </nav>
                     </div>
                 </div>
 
-               
+
 
                 <div>
                     <hr />
