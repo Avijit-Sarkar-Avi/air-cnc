@@ -59,6 +59,15 @@ async function run() {
       res.send(user)
     })
 
+    // Get All Users
+
+    app.get('/users', async (req, res) => {
+      const users = await usersCollection.find().toArray()
+      console.log(users)
+      res.send(users)
+    })
+
+
     //save a booking
     app.post('/bookings', async (req, res) => {
       const bookingData = req.body

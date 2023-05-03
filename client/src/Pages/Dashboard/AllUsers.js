@@ -5,9 +5,9 @@ import SmallSpinner from '../../Components/Spinner/SmallSpinner'
 const AllUsers = () => {
     const [loading, setLoading] = useState(false)
     const [users, setUsers] = useState([])
-    // useEffect(() => {
-    //     getUsers()
-    // }, [])
+    useEffect(() => {
+        getUsers()
+    }, [])
 
     // const handleRequest = user => {
     //     makeHost(user).then(data => {
@@ -15,13 +15,13 @@ const AllUsers = () => {
     //         getUsers()
     //     })
     // }
-    // const getUsers = () => {
-    //     setLoading(true)
-    //     getAllUsers().then(data => {
-    //         setUsers(data)
-    //         setLoading(false)
-    //     })
-    // }
+    const getUsers = () => {
+        setLoading(true)
+        getAllUsers().then(data => {
+            setUsers(data)
+            setLoading(false)
+        })
+    }
 
 
     return (
