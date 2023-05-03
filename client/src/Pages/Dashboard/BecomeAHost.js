@@ -7,9 +7,7 @@ import { getRole, hostRequest } from '../../api/user';
 const BecomeAHost = () => {
 
     const { user } = useContext(AuthContext)
-
     const [role, setRole] = useState(null)
-
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
